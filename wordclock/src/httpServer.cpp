@@ -1,7 +1,9 @@
+#include <ESP8266WiFi.h>
+
 #include "httpServer.h"
 #include "gui.h"
 #include "controller.h"
-    
+
 void HttpServer::setup() {
     HttpServer::ip = WiFi.localIP().toString();
     
@@ -16,12 +18,19 @@ void HttpServer::setup() {
 	HttpServer::web.on("/api/wifi", HTTP_DELETE, Controller::deleteWiFi);
 
 	HttpServer::web.onNotFound(Controller::notFound);
-    HttpServer::web.begin();
+
+    config.ota = AC_OTA_BUILTIN;
+	config.hostName = "WordClock";
+    HttpServer::portal.config(config);
+    HttpServer::portal.begin();
 }
   
 void HttpServer::loop() {
     HttpServer::web.handleClient();
+	HttpServer::portal.handleRequest();
 }
 
 ESP8266WebServer HttpServer::web(80);
+AutoConnect HttpServer::portal(HttpServer::web);
+AutoConnectConfig HttpServer::config;
 String HttpServer::ip;
