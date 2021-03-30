@@ -9,7 +9,6 @@
 #include <FS.h>
 
 #include "src/grid.h"
-#include "src/wifi.h"
 #include "src/types.h"
 #include "src/color.h"
 #include "src/config.h"
@@ -27,7 +26,6 @@ void setup() {
 
   Config::load();
 
-  Wifi::setup();
   HttpServer::setup();
   Led::setup();
   Time::setup();

@@ -6,7 +6,6 @@
 #include "httpServer.h"
 #include "color.h"
 #include "gui.h"
-#include "wifi.h"
 #include "time.h"
 #include "led.h"
 #include "utcOffset.h"
@@ -79,7 +78,6 @@ void Controller::saveDnd() {
 }
 
 void Controller::deleteWiFi() {
-  Wifi::reset();
   ESP.restart();
   HttpServer::web.send(200, "text/html", "");
 }
