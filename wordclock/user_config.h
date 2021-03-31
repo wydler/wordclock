@@ -5,7 +5,7 @@
  * 10: 10 rows
  * 11: 11 rows
  */
-#define GRID_ROWS 11
+#define GRID_ROWS 10
 
 /* Grid cols
  * 
@@ -24,7 +24,7 @@
  * 2: buttom-left
  * 3: buttom-right
  */
-#define GRID_FIRST 2
+#define GRID_FIRST 3
 
 /* Grid language
  *  
@@ -45,7 +45,7 @@
  * 0: before
  * 1: after
  */
-#define GRID_SINGLE_MINUTES 1
+#define GRID_SINGLE_MINUTES 0
 
 /* Data PIN, where the LED strip is connected to */
 #define DATA_PIN D4
