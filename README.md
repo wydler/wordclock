@@ -1,7 +1,5 @@
 # WordClock
-[![Version](https://img.shields.io/badge/version-4.0.0-green.svg?style=for-the-badge)](#) [![mantained](https://img.shields.io/maintenance/yes/2020.svg?style=for-the-badge)](#)
-
-[![maintainer](https://img.shields.io/badge/maintainer-Goran%20Zunic%20%40panbachi-blue.svg?style=for-the-badge)](https://www.panbachi.de)
+[![Version](https://img.shields.io/github/v/tag/wydler/wordclock?style=for-the-badge)](#) [![mantained](https://img.shields.io/github/last-commit/wydler/wordclock?style=for-the-badge)](#)
 
 **Font and german layout based on https://www.mikrocontroller.net/articles/Word_Clock**
 
@@ -13,7 +11,7 @@
 ## WordClock
 * [FastLED](https://github.com/FastLED/FastLED)
 * [NTPClient](https://github.com/arduino-libraries/NTPClient)
-* [WifiManager](https://github.com/tzapu/WiFiManager)
+* [AutoConnect](https://github.com/Hieromon/AutoConnect)
 * [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 
 # Assemble
